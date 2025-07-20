@@ -158,7 +158,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-gray-400 text-sm">
-              © 2024 Excellence Academy. All rights reserved.
+              © 2024 Parental Touch School. All rights reserved.
             </p>
           </div>
         </div>
