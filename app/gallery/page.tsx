@@ -136,11 +136,11 @@ export default function GalleryPage() {
     setCurrentIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const openLightbox = (item) => {
+  const openLightbox = (item: typeof galleryItems[number]) => {
     setLightboxItem(item);
     setLightboxOpen(true);
   };
@@ -160,7 +160,7 @@ export default function GalleryPage() {
 
   // Keyboard navigation
   useEffect(() => {
-    const handleKeyPress = (e) => {
+    const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') prevSlide();
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === 'Escape') closeLightbox();
@@ -170,7 +170,7 @@ export default function GalleryPage() {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
